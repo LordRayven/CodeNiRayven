@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Example</title>
+</head>
+<body>
+	<form method="POST">
+		<label for="fullname">Name:</label>
+		<input type="text" id="fullname" name="Name1" required><br>
+		
+
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="home" required><br>
+	
+
+		<label for="mail">E-mail:</label>
+		<input type="text" id="mail" name="email"><br>
+
+
+		<label for="website">Website:</label>
+		<input type="text" id="website" name="url"><br>
+
+		<label for="comment">Comment:</label><br>
+		<textarea rows="4" cols="40" id="comment" name="comment"></textarea><br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br><br>
+
+		<button type="submit" name="submit">Submit</button><br><br>
+
+		<h1>Your Input</h1>
+		<?php
+		if(isset($_POST['submit'])) {
+			echo "Name: " . $_POST['Name1'] . "<br>";
+			echo "Address: " . $_POST['home'] . "<br>";
+			echo "Email: " . $_POST['email'] . "<br>";
+			echo "Website: " . $_POST['url'] . "<br>";
+			echo "Comment: " . $_POST['comment'] . "<br>";
+			echo "Gender: " . $_POST['gender'] . "<br>";
+		}
+		?>
+	</form>
+</body>
+</html>
